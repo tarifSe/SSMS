@@ -7,5 +7,6 @@ namespace SSMS.BLL
 {
     public class CategoryBLL
     {
+
     }
 }
