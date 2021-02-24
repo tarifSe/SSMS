@@ -14,6 +14,10 @@ namespace SSMS.DatabaseContext
         {
 
         }
+        public SSMSDbContext()
+        {
+
+        }
         public DbSet<Category> Categories { get; set; }
     }
 }
