@@ -9,19 +9,20 @@ namespace SSMS.Repositories
 {
     public class CategoryReposetory
     {
-        //private readonly SSMSDbContext _context;
-        //public CategoryReposetory(SSMSDbContext sSMSDbContext)
-        //{
-        //    _context = sSMSDbContext;
-        //}
+        private readonly SSMSDbContext _context;
+        public CategoryReposetory(SSMSDbContext sSMSDbContext)
+        {
+            _context = sSMSDbContext;
+        }
 
-        SSMSDbContext _context = new SSMSDbContext();
+
+        //SSMSDbContext _context = new SSMSDbContext();
         public bool Add(Category category)
         {
             int isExecuted = 0;
             //int isEx = 0;
 
-            _context.Categories.Add(category);
+            _context.Add(category);
             isExecuted = _context.SaveChanges();
             //isEx = Convert.ToInt32(_context.SaveChangesAsync());
 

@@ -9,15 +9,11 @@ namespace SSMS.DatabaseContext
 {
     public class SSMSDbContext : DbContext
     {
-        public SSMSDbContext(DbContextOptions<SSMSDbContext> options)
-            : base(options)
+        public SSMSDbContext(DbContextOptions<SSMSDbContext> options) : base(options)
         {
 
         }
-        public SSMSDbContext()
-        {
-
-        }
+       
         public DbSet<Category> Categories { get; set; }
     }
 }

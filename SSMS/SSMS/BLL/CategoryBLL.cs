@@ -1,4 +1,5 @@
-﻿using SSMS.Models;
+﻿using SSMS.DatabaseContext;
+using SSMS.Models;
 using SSMS.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,8 @@ namespace SSMS.BLL
 {
     public class CategoryBLL
     {
-        CategoryReposetory _categoryReposetory = new CategoryReposetory();
+        SSMSDbContext sSMSDbContext;
+        CategoryReposetory _categoryReposetory = new CategoryReposetory(sSMSDbContext);
         public bool Add(Category category)
         {
             return _categoryReposetory.Add(category);
