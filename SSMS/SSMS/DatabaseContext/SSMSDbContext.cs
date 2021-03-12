@@ -15,5 +15,6 @@ namespace SSMS.DatabaseContext
         }
        
         public DbSet<Category> Categories { get; set; }
+        public DbSet<MyTestModel> myTestModels { get; set; }
     }
 }

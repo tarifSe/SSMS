@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SSMS.DatabaseContext;
 
 namespace SSMS.Migrations
 {
     [DbContext(typeof(SSMSDbContext))]
-    partial class SSMSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210301165021_TestModelAdded")]
+    partial class TestModelAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

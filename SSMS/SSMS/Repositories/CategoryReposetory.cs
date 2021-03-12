@@ -32,5 +32,10 @@ namespace SSMS.Repositories
             }
             return false;
         }
+
+        public List<Category> GetAll()
+        {
+            return _context.Categories.ToList();
+        }
     }
 }
