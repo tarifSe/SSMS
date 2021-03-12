@@ -15,16 +15,12 @@ namespace SSMS.Repositories
             _context = sSMSDbContext;
         }
 
-
-        //SSMSDbContext _context = new SSMSDbContext();
         public bool Add(Category category)
         {
             int isExecuted = 0;
-            //int isEx = 0;
 
             _context.Add(category);
             isExecuted = _context.SaveChanges();
-            //isEx = Convert.ToInt32(_context.SaveChangesAsync());
 
             if (isExecuted > 0)
             {

@@ -28,11 +28,5 @@ namespace SSMS.Controllers
             _cbll.Add(category);
             return View(category);
         }
-
-        //public string Add(Category category)
-        //{
-        //    _categoryBLL.Add(category);
-        //    return "Added";
-        //}
     }
 }

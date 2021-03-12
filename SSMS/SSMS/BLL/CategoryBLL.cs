@@ -11,8 +11,6 @@ namespace SSMS.BLL
     public class CategoryBLL
     {
         private readonly CategoryReposetory _repo;
-        //SSMSDbContext sSMSDbContext;
-        //CategoryReposetory _categoryReposetory = new CategoryReposetory(sSMSDbContext);
         public CategoryBLL(CategoryReposetory repo)
         {
             _repo = repo;
