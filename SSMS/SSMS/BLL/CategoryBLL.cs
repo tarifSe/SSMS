@@ -10,19 +10,19 @@ namespace SSMS.BLL
 {
     public class CategoryBLL
     {
-        private readonly CategoryReposetory _repo;
-        public CategoryBLL(CategoryReposetory repo)
+        private readonly CategoryReposetory _categoryReposetory;
+        public CategoryBLL(CategoryReposetory categoryReposetory)
         {
-            _repo = repo;
+            _categoryReposetory = categoryReposetory;
         }
         public bool Add(Category category)
         {
-            return _repo.Add(category);
+            return _categoryReposetory.Add(category);
         }
 
         public List<Category> GetAll()
         {
-            return _repo.GetAll();
+            return _categoryReposetory.GetAll();
         }
     }
 }

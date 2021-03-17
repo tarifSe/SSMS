@@ -10,22 +10,30 @@ namespace SSMS.Controllers
 {
     public class CategoriesController : Controller
     {
-        private readonly CategoryBLL _cbll;
-        public CategoriesController(CategoryBLL cbll)
+        private readonly CategoryBLL _categoryBLL;
+        public CategoriesController(CategoryBLL categoryBLL)
         {
-            _cbll = cbll;
+            _categoryBLL = categoryBLL;
         }
 
+        public IActionResult Index()
+        {
+            return View(_categoryBLL.GetAll());
+        }
         
         public IActionResult Add()
         {
-            return View(_cbll.GetAll());
+            return View();
         }
 
         [HttpPost]
         public IActionResult Add(Category category)
         {
-            _cbll.Add(category);
+            if (ModelState.IsValid)
+            {
+                _categoryBLL.Add(category);
+            }
+            
             return View(category);
         }
     }
